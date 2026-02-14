@@ -10,7 +10,7 @@ namespace Library.Models
 
         [Required]
         [StringLength(200)]
-        public string Title { get; set; }
+        public required string Title { get; set; }
 
         [Required]
         [StringLength(1000)]
