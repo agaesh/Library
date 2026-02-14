@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Identity;
+using System;
 using System.ComponentModel.DataAnnotations;
 
 namespace Library.Models
@@ -8,22 +9,21 @@ namespace Library.Models
         [Key]
         public int Id { get; set; }
 
-        [Required]
-        [StringLength(200)]
+        [Required(ErrorMessage = "Title is required.")]
+        [StringLength(200, ErrorMessage = "Title cannot exceed 200 characters.")]
+
         public required string Title { get; set; }
 
-        [Required]
-        [StringLength(1000)]
+        [Required(ErrorMessage = "Description is required.")]
+        [StringLength(1000, ErrorMessage = "Description cannot exceed 1000 characters.")]
         public required string Description { get; set; }
 
-        [Required]
-        [StringLength(150)]
+        [Required(ErrorMessage = "Author is required.")]
+        [StringLength(150, ErrorMessage = "Author name cannot exceed 150 characters.")]
         public required string Author { get; set; }
 
-        [Required]
         public DateTime Created { get; set; } = DateTime.UtcNow;
 
-        [Required]
         public DateTime Updated { get; set; } = DateTime.UtcNow;
     }
 }
