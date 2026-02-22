@@ -161,4 +161,22 @@
         box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.25); /* subtle glow */
     }
 
+    .filters .search-btn {
+        margin-left: auto;
+    }
+
+    .search-btn {
+        width: 100%;
+    }
+
+    .search-btn button {
+        background-color: darkblue;
+        cursor: pointer;
+        width: 100%;
+        color: white;
+        padding: 10px;
+        border-radius: 8px;
+        font-weight: bolder;
+        height: 40px;
+    }
 </style>
