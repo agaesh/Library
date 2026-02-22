@@ -179,4 +179,23 @@
         font-weight: bolder;
         height: 40px;
     }
+
+    .genre-select {
+        border-radius: 20px;
+        font-size: 14px;
+        font-weight: 500;
+        background-color: #f3f4f6; /* neutral gray */
+        color: #0d1b2a; /* dark blue text */
+        border: 1px solid #d1d5db;
+        cursor: pointer;
+        /* Add spacing around the arrow */
+        padding: 6px 28px 6px 12px; /* extra right padding for arrow */
+        appearance: none; /* remove default arrow */
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        background-image: url("data:image/svg+xml;utf8,<svg fill='%230d1b2a' height='16' viewBox='0 0 24 24' width='16' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
+        background-repeat: no-repeat;
+        background-position: right 8px center; /* control arrow position */
+        background-size: 16px;
+    }
 </style>
