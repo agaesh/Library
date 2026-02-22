@@ -93,5 +93,13 @@
 </template>
 
 <style scoped>
+    .create-btn{
+        align-self:flex-end;
+    }
+    .create-btn button {
+        background-color: #3b82f6;
+        color: white;
+        border-radius: 8px;
+    }
 
 </style>
