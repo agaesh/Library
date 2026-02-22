@@ -1,5 +1,52 @@
 <script setup>
     import Sidebar from './components/Sidebar.vue'
+    import { ref, computed} from 'vue'
+    import BookItem from './components/BookItem.vue'
+    import TableList from './components/BookList.vue'
+    
+
+    const books = ref([
+        {
+            id: 1,
+            name: 'Echo Is Everything', 
+            author: 'Author Name',
+            cover: 'https://images.template.net/453953/6x9-Book-Cover-Template-edit-online.png',
+            status: 'active',
+            createdAt: new Date()
+        },
+        {
+            id: 2,
+            name: 'Another Book',
+            author: 'Second Author',
+            cover: 'https://images.template.net/453953/6x9-Book-Cover-Template-edit-online.png',
+            status: 'inactive',
+            createdAt: new Date()
+        }
+    ])
+
+    // Convert books into rows for TableList
+    const rows = computed(() =>
+        books.value.map((book, index) => [
+            index + 1,                // #
+            book.name,                // Name
+            book.status,              // Status
+            new Date(book.createdAt).toLocaleDateString() // Created
+        ])
+    )
+
+    function handleEdit(row) {
+        console.log('Edit clicked:', row)
+    }
+    function handleDelete(row) {
+        console.log('Delete clicked:', row)
+    }
+    function handleAssign(row) {
+        console.log('Assign clicked:', row)
+    }
+    function handleView(row) {
+        console.log('View clicked:', row)
+    }
+
 </script>
 
 <template>
