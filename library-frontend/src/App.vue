@@ -1,7 +1,6 @@
 <script setup>
     import Sidebar from './components/Sidebar.vue'
     import { ref, computed} from 'vue'
-    import BookItem from './components/BookItem.vue'
     import TableList from './components/BookList.vue'
     
 
