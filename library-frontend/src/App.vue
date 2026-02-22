@@ -198,4 +198,41 @@
         background-position: right 8px center; /* control arrow position */
         background-size: 16px;
     }
+
+    .list-container{
+        max-height:500px;
+        overflow-x:scroll;
+        height:auto;
+    }
+    @media (min-width: 600px) {
+        .hamburger {
+            display: none;
+        }
+        .search-btn {
+            display: none;
+        }
+
+        .book-item {
+            flex-direction: row; /* Side by side on bigger screens */
+            align-items: center;
+        }
+
+        .book-image {
+            flex: 1;
+        }
+
+        .book-details {
+            flex: 2;
+            padding: 0 10px;
+        }
+
+        .book-actions {
+            flex: 1;
+            justify-content: flex-end;
+        }
+
+        .list-container{
+            overflow-x:hidden;
+        }
+    }
 </style>
