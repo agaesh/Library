@@ -102,4 +102,27 @@
         border-radius: 8px;
     }
 
+    input[type="search"] {
+        width: 100%;
+        padding: 12px 16px;
+        font-size: 14px;
+        border: 1px solid #a855f7; /* purple border */
+        border-radius: 8px;
+        background-color: #ffffff; /* white background */
+        color: #4b0082; /* deep purple text */
+        outline: none;
+        transition: all 0.3s ease;
+    }
+
+    /* Focus state for better UX */
+    input[type="search"]:focus {
+        border-color: #7c3aed; /* stronger purple */
+        box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.2); /* subtle purple glow */
+    }
+
+    /* Placeholder styling */
+    input[type="search"]::placeholder {
+        color: #9c27b0; /* lighter purple for placeholder */
+        opacity: 0.7;
+    }
 </style>
