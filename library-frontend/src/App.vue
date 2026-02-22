@@ -56,11 +56,11 @@
         <div style="display: flex; flex-direction:column; align-items: flex-start; gap: 1rem;">
             <div class="create-btn">
                 <button>Add Books</button>
-      </div>
+            </div>
             <input type="search" placeholder="Search Books" />
             <div class="search-btn">
                 <button>Search Books</button>
-  </div>
+            </div>
             <!--<div class="filters" style="display: flex; align-items: flex-start; gap: 0.3rem;">-->
             <div class="filters" style="display:flex; flex-direction:row;">
                 <button class="button filter-pil">All</button>
