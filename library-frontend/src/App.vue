@@ -125,4 +125,40 @@
         color: #9c27b0; /* lighter purple for placeholder */
         opacity: 0.7;
     }
+
+    .filters {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .filter-pil {
+        background-color: #f3f4f6; /* light gray base */
+        color: #0d1b2a; /* dark blue text for consistency */
+        border: 1px solid #d1d5db;
+        border-radius: 20px;
+        padding: 8px 16px;
+        font-size: 14px;
+        font-weight: 500;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+    }
+
+    /* Hover: subtle gray highlight */
+    .filter-pil:hover {
+        background-color: #e5e7eb;
+        border-color: #cbd5e1;
+    }
+
+    /* Focus: white background with a softer accent */
+    .filter-pil:focus {
+        background-color: #ffffff;
+        color: #2563eb; /* professional blue accent (lighter than CTA dark blue) */
+        border: 2px solid #2563eb;
+        outline: none;
+        box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.25); /* subtle glow */
+    }
+
 </style>
