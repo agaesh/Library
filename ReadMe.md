@@ -124,7 +124,116 @@ Content-Type: application/json
 
 ---
 
-**Author:** Agaesh
-**Created:** 14 February 2026
+# 📘 Frontend Technical Documentation
 
+## 1. Overview
+This frontend implements a **Book CRUD application** with responsive design and styled UI components. It is built using **Vue 3** with Composition API and scoped CSS for maintainable, modular design.
+
+Key features:
+- Sidebar navigation
+- Book list rendering with sample data
+- Create, search, and filter functionality
+- Responsive layouts for mobile and desktop
+
+---
+
+## 2. Tech Stack
+- **Framework**: Vue 3 (Composition API)
+- **Language**: JavaScript (ES6+)
+- **Styling**: Scoped CSS, responsive media queries
+- **Build Tool**: Vite
+- **Server Config**: Exposed on `0.0.0.0`, port `5173`
+
+---
+
+## 3. Setup Instructions
+```bash
+# Install dependencies
+npm install
+
+# Run development server
+npm run dev
+
+# Build for production
+npm run build
 ```
+
+---
+
+## 4. Project Structure
+```
+src/
+ ├─ components/
+ │   ├─ BookList.vue       # Renders list of books
+ │   └─ Sidebar.vue        # Navigation sidebar
+ ├─ assets/                # Images, icons
+ ├─ styles/                # Global CSS
+ ├─ App.vue                # Root component
+ └─ main.js                # Entry point
+```
+
+## 5. Components
+
+### BookItem.vue
+- **Props**: `id`, `name`, `author`, `cover`, `status`, `createdAt`
+- **Usage**: Displays book details with responsive layout.
+
+### BookList.vue
+- **Props**: `books` (array of book objects)
+- **Usage**: Renders list of `BookItem` components.
+
+### Sidebar.vue
+- Provides navigation and quick access to CRUD actions.
+
+---
+
+## 6. Styling Guidelines
+- **Create Button**: Blue background, white text, rounded corners.
+- **Search Input**: Purple border, deep purple text, focus glow, styled placeholder.
+- **Search Button**: Dark blue background, bold white text.
+- **Filters**: Light gray pills with hover/focus states.
+- **Genre Select**: Custom dropdown with SVG arrow.
+- **List Container**: Scrollable on mobile, responsive flex layout on desktop.
+- **Base Theme**: White background, black font.
+---
+
+## 🔧 Responsive Design Enhancements
+
+### Mobile (≤600px)
+- **Search Input**:  
+  - Takes full width (`width: 100%`) for easy typing.  
+  - Search button hidden or stacked below for simplicity.  
+- **Filters**:  
+  - Display as stacked pills with `flex-wrap: wrap` and `gap` for neat spacing.  
+  - Ensure touch-friendly padding and larger tap targets.
+  - 
+## 8. Development Standards
+- **Commit Messages**: Follow [Conventional Commits](https://www.conventionalcommits.org/):
+  - `feat`: new features
+  - `style`: CSS changes
+  - `chore`: config updates
+- **Branch Naming**: `feature/<task>` (e.g., `feature/book-crud-page`)
+
+---
+
+## 9. Future Improvements
+- Integrate with backend API for real CRUD operations.
+- Add unit tests for components.
+- Improve accessibility (ARIA attributes, keyboard navigation).
+- Enhance documentation with screenshots and usage examples.
+
+---
+
+## 10. UI
+
+i. Desktop View
+<img width="1890" height="883" alt="image" src="https://github.com/user-attachments/assets/28108c12-4b74-4455-a9d0-bb000d256389" />
+
+ii. Mobile View
+
+<img width="282" height="561" alt="image" src="https://github.com/user-attachments/assets/6c1f9b08-f01d-46f4-a6c9-2ee6bc713478" />
+<img width="283" height="555" alt="image" src="https://github.com/user-attachments/assets/80a0fce9-d44e-4891-aae6-b2ff83e73d67" />
+<img width="287" height="549" alt="image" src="https://github.com/user-attachments/assets/88c5f4c8-fccc-44c2-b70f-3566ae7e4135" />
+
+**Author:** Agaesh
+**Created:** 22 February 2026
