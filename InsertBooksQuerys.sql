@@ -1,0 +1,22 @@
+﻿INSERT INTO Books (Title, Description, Author, Created, Updated)
+VALUES 
+('Design Patterns', 'Elements of reusable object-oriented software.', 'Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides', GETUTCDATE(), GETUTCDATE()),
+('Refactoring', 'Improving the design of existing code.', 'Martin Fowler', GETUTCDATE(), GETUTCDATE()),
+('Domain-Driven Design', 'Tackling complexity in the heart of software.', 'Eric Evans', GETUTCDATE(), GETUTCDATE()),
+('Effective Java', 'Best practices for the Java programming language.', 'Joshua Bloch', GETUTCDATE(), GETUTCDATE()),
+('Introduction to Algorithms', 'Comprehensive guide to modern algorithms.', 'Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest, Clifford Stein', GETUTCDATE(), GETUTCDATE()),
+('Patterns of Enterprise Application Architecture', 'Catalog of patterns for enterprise software design.', 'Martin Fowler', GETUTCDATE(), GETUTCDATE()),
+('Head First Design Patterns', 'A brain-friendly guide to design patterns.', 'Eric Freeman, Elisabeth Robson', GETUTCDATE(), GETUTCDATE()),
+('Working Effectively with Legacy Code', 'Strategies for dealing with legacy systems.', 'Michael Feathers', GETUTCDATE(), GETUTCDATE()),
+('Code Complete', 'Practical handbook of software construction.', 'Steve McConnell', GETUTCDATE(), GETUTCDATE()),
+('The Mythical Man-Month', 'Essays on software engineering.', 'Frederick P. Brooks Jr.', GETUTCDATE(), GETUTCDATE()),
+('Continuous Delivery', 'Reliable software releases through build, test, and deployment automation.', 'Jez Humble, David Farley', GETUTCDATE(), GETUTCDATE()),
+('Software Engineering at Google', 'Lessons learned from programming over decades.', 'Titus Winters, Tom Manshreck, Hyrum Wright', GETUTCDATE(), GETUTCDATE()),
+('Agile Estimating and Planning', 'Guidance on agile project planning.', 'Mike Cohn', GETUTCDATE(), GETUTCDATE()),
+('Test-Driven Development by Example', 'How to use TDD effectively.', 'Kent Beck', GETUTCDATE(), GETUTCDATE()),
+('Building Microservices', 'Designing fine-grained systems.', 'Sam Newman', GETUTCDATE(), GETUTCDATE()),
+('Release It!', 'Design and deploy production-ready software.', 'Michael T. Nygard', GETUTCDATE(), GETUTCDATE()),
+('Software Architecture in Practice', 'Comprehensive guide to software architecture.', 'Len Bass, Paul Clements, Rick Kazman', GETUTCDATE(), GETUTCDATE()),
+('Clean Architecture', 'A guide to building maintainable systems.', 'Robert C. Martin', GETUTCDATE(), GETUTCDATE()),
+('Programming Pearls', 'Classic insights into programming techniques.', 'Jon Bentley', GETUTCDATE(), GETUTCDATE()),
+('The Art of Computer Programming', 'Foundational algorithms and analysis.', 'Donald E. Knuth', GETUTCDATE(), GETUTCDATE());

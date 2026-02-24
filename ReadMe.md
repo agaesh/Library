@@ -1,4 +1,4 @@
-````markdown
+﻿````markdown
 # Library Management System - Book API
 
 A simple **Library Management System Web API** built using **.NET Core** and **Entity Framework Core**.  
@@ -40,6 +40,8 @@ This project allows basic CRUD operations for managing books in a library.
 
 ## API Endpoints
 
+1. Books
+
 | Method | Endpoint          | Description             |
 | ------ | ----------------- | ----------------------- |
 | GET    | `/books`      | Get all books           |
@@ -47,6 +49,46 @@ This project allows basic CRUD operations for managing books in a library.
 | POST   | `/books`      | Create a new book       |
 | PUT    | `/books/{id}` | Update an existing book |
 | DELETE | `/books/{id}` | Delete a book by ID     |
+
+---
+
+2. # 👤 Users API – Endpoint Table
+
+| Method | Endpoint      | Description          | Request Body     | Success Response           | Error Response                 |
+| ------ | ------------- | -------------------- | ---------------- | -------------------------- | ------------------------------ |
+| GET    | `/Users`      | Get all users        | None             | 200 OK – List of users     | —                              |
+| GET    | `/Users/{id}` | Get user by ID       | None             | 200 OK – User object       | 404 Not Found                  |
+| POST   | `/Users`      | Create new user      | User JSON object | 201 Created – Created user | 400 Bad Request                |
+| PUT    | `/Users/{id}` | Update existing user | User JSON object | 204 No Content             | 400 Bad Request, 404 Not Found |
+| DELETE | `/Users/{id}` | Delete user          | None             | 204 No Content             | 404 Not Found                  |
+
+---
+
+# 📄 Example User JSON Structure
+
+```json
+{
+  "id": 1,
+  "name": "Agaesh",
+  "email": "agaesh@example.com",
+  "role": "MEMBER",
+  "createdDate": "2026-02-19T10:00:00Z"
+}
+```
+
+---
+
+
+
+# 🔎 Response Codes Summary
+
+| Code | Meaning                                     |
+| ---- | ------------------------------------------- |
+| 200  | Request successful                          |
+| 201  | Resource created                            |
+| 204  | Successfully processed, no content returned |
+| 400  | Invalid request                             |
+| 404  | Resource not found                          |
 
 ---
 
