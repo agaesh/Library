@@ -14,6 +14,8 @@ namespace Library.Data
 
         public DbSet<Borrows> Borrows { get; set; }
 
+        public DbSet<Doc> Docs { get; set; }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
