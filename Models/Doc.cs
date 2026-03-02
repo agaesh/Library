@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -23,6 +24,7 @@ namespace Library.Models
         PV = 7,
     }
 
+    [Index(nameof(DocNo), IsUnique = true)]
     public class Doc
     {
         [Key]
@@ -30,6 +32,7 @@ namespace Library.Models
 
         [Required]
         [StringLength(50)]
+       
         public string DocNo { get; set; } = string.Empty;
 
         [Required]
@@ -56,7 +59,7 @@ namespace Library.Models
 
         // Navigation properties
         [ForeignKey(nameof(CreatedById))]
-        public virtual User CreatedBy { get; set; }
+        public virtual required User CreatedBy { get; set; }
 
         [ForeignKey(nameof(PostedById))]
         public virtual User? PostedBy { get; set; }
@@ -67,6 +70,5 @@ namespace Library.Models
         // References
         public int? RefId { get; set; }        // Link to another doc
         public int? SupplierId { get; set; }   // For GRN/vendor
-
     }
 }
