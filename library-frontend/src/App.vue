@@ -49,26 +49,54 @@
 </script>
 
 <template>
+    <NavBar />
+    <!--<div class="wrapper">-->
+        <div class="wrapper">
+            <div class="filter-container" style="display:flex; flex-direction:row; margin-top:20px;">
+                <div class="header" style="width:100%;">
     <div>
-        <Sidebar />
-        <h2>Admin Book Catalog</h2>
-        <div style="display: flex; flex-direction:column; align-items: flex-start; gap: 1rem;">
+                        <h3>Admin Book Catalog</h3>
+                        <p style="color:#ccc;">Manage Books</p>
+                    </div>
+
             <div class="create-btn">
                 <button>Add Books</button>
             </div>
-            <input type="search" placeholder="Search Books" />
-            <div class="search-btn">
-                <button>Search Books</button>
             </div>
-            <!--<div class="filters" style="display: flex; align-items: flex-start; gap: 0.3rem;">-->
-            <div class="filters" style="display:flex; flex-direction:row;">
-                <button class="button filter-pil">All</button>
-                <button class="button filter-pil">In Stock</button>
-                <button class="button filter-pil">Out Of Stock</button>
-                <button class="button filter-pil">Low Stock</button>
+
+                <input type="search" class="search-filter" placeholder="Search Books" />
+
+                <div class="filter-date">
+                    <label for="date-filter">From</label>
+                    <input type="date"
+                           id="date-filter"
+                           name="fromDate"
+                           class="filter-pil">
+
+                    <label for="date-filter">To</label>
+                    <input type="date"
+                           id="date-filter"
+                           name="fromDate"
+                           class="filter-pil">
+                </div>
+
+                <div class="filters">
+                    <!-- Stock filter -->
+                    <select class="filter-pil custom-select">
+                        <option value="all">All Stock</option>
+                        <option value="in-stock">In Stock</option>
+                        <option value="out-stock">Out Of Stock</option>
+                        <option value="low-stock">Low Stock</option>
+                    </select>
+
+                    <select class="filter-pil custom-select">
+                        <option value="Active">Active</option>
+                        <option value="Inactive">Inactive</option>
+                        <option value="Deleted">Delete</option>
+                    </select>
 
                 <!-- Genre filter -->
-                <select class="filter-pil genre-select">
+                    <select class="filter-pil custom-select">
                     <option value="ALL">All Genres</option>
                     <option value="fiction">Fiction</option>
                     <option value="non-fiction">Non-Fiction</option>
@@ -77,6 +105,8 @@
                     <option value="history">History</option>
                     <option value="biography">Biography</option>
                 </select>
+
+                    <button class="button filter-pil">More</button>
             </div>
         </div>
 
@@ -89,9 +119,29 @@
                        @view="handleView" />
         </div>
     </div>
+    <!--</div>-->
 </template>
 
 <style scoped>
+ 
+    .header{
+        display:flex;  
+        flex-direction:row;
+        align-items:flex-start;
+        padding:20px 0px;
+        justify-content:space-between;
+    }
+
+    .header h3{
+        align-self:flex-end;
+        margin:0px;
+        font-size:16px;
+    }
+
+    .header p{
+        margin:2px;
+    }
+
     .create-btn{
         align-self:flex-end;
     }
@@ -101,16 +151,18 @@
         border-radius: 8px;
     }
 
-    input[type="search"] {
+    .search-filter {
         width: 100%;
         padding: 12px 16px;
         font-size: 14px;
-        border: 1px solid #a855f7; /* purple border */
-        border-radius: 8px;
-        background-color: #ffffff; /* white background */
-        color: #4b0082; /* deep purple text */
+        border: 1px solid #a855f7;
+        border-radius: 12px;
+        background-color: #ffffff;
+        color: #4b0082;
         outline: none;
         transition: all 0.3s ease;
+        height:30px;
+        flex:1;
     }
 
     /* Focus state for better UX */
@@ -125,12 +177,27 @@
         opacity: 0.7;
     }
 
-    .filters {
+    .filter-container {
         display: flex;
+        flex-direction:column;
+        align-items: flex-start;
         flex-wrap: wrap;
         gap: 8px;
         width: 100%;
         margin-bottom: 20px;
+        background-color: white;
+        padding: 20px;
+        border-radius: 4px;
+        flex:1;
+    }
+
+    .filter-date{
+       display:none;
+    }
+    .filter-date input[type=date]{
+        width:fit-content;
+        min-width:fit-content;
+        height:30px;    
     }
 
     .filter-pil {
@@ -143,6 +210,7 @@
         font-weight: 500;
         cursor: pointer;
         transition: all 0.2s ease-in-out;
+        margin: 0px 2px;
     }
 
     /* Hover: subtle gray highlight */
@@ -179,7 +247,7 @@
         height: 40px;
     }
 
-    .genre-select {
+    .custom-select {
         border-radius: 20px;
         font-size: 14px;
         font-weight: 500;
@@ -203,11 +271,21 @@
         overflow-x:scroll;
         height:auto;
     }
+
+    @media (max-width: 510px) {
+        .custom-select{
+            display:none;
+        }
+    }
+    @media (min-width: 510px) {
+        .filter-date {
+            display: inline-flex;
+            gap: 20px;
+            align-items: center;
+        }
+    }
     @media (min-width: 600px) {
         .hamburger {
-            display: none;
-        }
-        .search-btn {
             display: none;
         }
 
