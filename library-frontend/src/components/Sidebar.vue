@@ -3,7 +3,16 @@
 const showSidebar = ref(false)
 const toggleSidebar = () => {
   showSidebar.value = !showSidebar.value
-}</script>
+    }
+
+    const navbarItems = ["Dashboard", "Books", "Borrowers", "Settings"]
+
+    const activeItem = ref(null);
+
+    function setActive(item) {
+        activeItem.value = item
+    }
+</script>
 
 <template>
     <!-- Hamburger button -->
@@ -15,12 +24,18 @@ const toggleSidebar = () => {
     <div v-if="showSidebar" class="sidebar">
         <button class="close-btn" @click="toggleSidebar">×</button>
         <nav>
-            <h3 style="color:white;">Library</h3>
+            <div class="brand">
+                <h3>LIBRA</h3>
+            </div>
+
             <ul>
-                <li><a href="#">Dashboard</a></li>
-                <li><a href="#">Books</a></li>
-                <li><a href="#">Borrowers</a></li>
-                <li><a href="#">Settings</a></li>
+                <li 
+                    v-for="list in navbarItems" 
+                    :key="list" 
+                    :class="{ active: activeItem === list }"
+                    @click = "setActive(list)">
+                    <a>{{ list }}</a>
+                </li>
             </ul>
         </nav>
     </div>
@@ -41,8 +56,7 @@ const toggleSidebar = () => {
         left: 0;
         width: 260px;
         height: 100%;
-        background: #0d1b2a; /* deep dark blue */
-        color: #ffffff;
+        background: #ffffff;
         box-shadow: 2px 0 12px rgba(0,0,0,0.2);
         padding: 24px; 
         display: flex;
@@ -52,12 +66,25 @@ const toggleSidebar = () => {
         z-index:2;
     }
 
+    .brand {
+        display: flex; /* align logo + text if needed */
+        align-items: center;
+        font-weight: 700;
+        font-size: 18px;
+        color: #1d4ed8; /* brand blue */
+        white-space: nowrap; /* prevent wrapping */
+        background: none; /* remove background */
+        border: none; /* no border */
+        padding: 0; /* no extra spacing */
+        margin: 0;
+    }
+
     .close-btn {
         align-self: flex-end;
         background: none;
         border: none;
         font-size: 26px;
-        color: #ffffff;
+        color: darkblue;
         cursor: pointer;
         margin-bottom: 20px;
     }
@@ -74,7 +101,6 @@ const toggleSidebar = () => {
 
     .sidebar nav a {
         text-decoration: none;
-        color: #ffffff;
         font-size: 15px;
         font-weight: 500;
         padding: 8px 12px;
@@ -84,7 +110,15 @@ const toggleSidebar = () => {
     }
 
     .sidebar nav a:hover {
-        background: #1b263b;
-        color: #e0e0e0;
+        background: rgba(0, 0, 0, 0.05); /* light transparent gray */
+    }
+    .active {
+        background-color: #1d4ed8;
+        font-weight: 600;
+        box-shadow: 0 2px 6px rgba(29, 78, 216, 0.3);
+        border-radius:20PX;
+    }
+    .active a{
+      color:white;
     }
 </style>
