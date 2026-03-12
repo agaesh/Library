@@ -29,11 +29,11 @@ const toggleSidebar = () => {
             </div>
 
             <ul>
-                <li 
-                    v-for="list in navbarItems" 
+                <li v-for="(list, index) in navbarItems"
                     :key="list" 
                     :class="{ active: activeItem === list }"
-                    @click = "setActive(list)">
+                    @click="setActive(list)"
+                    :tabindex="index + 1">
                     <a>{{ list }}</a>
                 </li>
             </ul>
@@ -104,9 +104,10 @@ const toggleSidebar = () => {
         font-size: 15px;
         font-weight: 500;
         padding: 8px 12px;
-        border-radius: 6px;
+        border-radius: 20px;
         display: block;
         transition: background 0.2s ease, color 0.2s ease;
+        cursor:pointer;
     }
 
     .sidebar nav a:hover {
