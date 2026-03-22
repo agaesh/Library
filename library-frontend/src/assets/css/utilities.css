@@ -1,0 +1,223 @@
+﻿/* =======================
+   Root Variables
+======================= */
+:root {
+    /* Custom variables */
+    --custom-radius: 20px;
+    --custom-flex: 1;
+    --custom-padding: 10px;
+    --custom-margin: 5px;
+    /* Gaps */
+    --gap-sm: 8px;
+    --gap-md: 16px;
+    /* Colors */
+    --color-primary: #3b82f6;
+    --color-secondary: #6b7280;
+    --color-danger: #ef4444;
+    --color-success: #10b981;
+    --color-warning: #f59e0b;
+}
+
+/* =======================
+   Flex Utilities
+======================= */
+.flex {
+    display: flex;
+}
+
+.flex-row {
+    flex-direction: row;
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.items-start {
+    align-items: flex-start;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.gap-sm {
+    gap: var(--gap-sm);
+}
+
+.gap-md {
+    gap: var(--gap-md);
+}
+
+/* =======================
+   Border Radius Utilities
+======================= */
+.rounded-sm {
+    border-radius: 4px;
+}
+
+.rounded {
+    border-radius: 8px;
+}
+
+.rounded-md {
+    border-radius: 12px;
+}
+
+.rounded-lg {
+    border-radius: 16px;
+}
+
+.rounded-full {
+    border-radius: 9999px;
+}
+
+/* Custom radius using variable */
+.custom-rounded {
+    border-radius: var(--custom-radius);
+}
+
+/* =======================
+   Padding Utilities
+======================= */
+/* All sides */
+.p-xs {
+    padding: 4px;
+}
+
+.p-sm {
+    padding: 8px;
+}
+
+.p-md {
+    padding: 16px;
+}
+
+.p-lg {
+    padding: 24px;
+}
+
+/* X-axis */
+.px-sm {
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.px-md {
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+/* Y-axis */
+.py-sm {
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+.py-md {
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+
+/* Individual sides */
+.pt-sm {
+    padding-top: 8px;
+}
+
+.pb-sm {
+    padding-bottom: 8px;
+}
+
+.pl-sm {
+    padding-left: 8px;
+}
+
+.pr-sm {
+    padding-right: 8px;
+}
+
+/* =======================
+   Margin Utilities
+======================= */
+/* All sides */
+.m-xs {
+    margin: 4px;
+}
+
+.m-sm {
+    margin: 8px;
+}
+
+.m-md {
+    margin: 16px;
+}
+
+.m-lg {
+    margin: 24px;
+}
+
+/* X-axis */
+.mx-sm {
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
+.mx-md {
+    margin-left: 16px;
+    margin-right: 16px;
+}
+
+/* Y-axis */
+.my-sm {
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.my-md {
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+/* Individual sides */
+.mt-sm {
+    margin-top: 8px;
+}
+
+.mb-sm {
+    margin-bottom: 8px;
+}
+
+.ml-sm {
+    margin-left: 8px;
+}
+
+.mr-sm {
+    margin-right: 8px;
+}
+
+/* =======================
+   Background Colors
+======================= */
+.bg-primary {
+    background-color: var(--color-primary);
+}
+
+.bg-secondary {
+    background-color: var(--color-secondary);
+}
+
+.bg-danger {
+    background-color: var(--color-danger);
+}
+
+.bg-success {
+    background-color: var(--color-success);
+}
+
+.bg-warning {
+    background-color: var(--color-warning);
+}
