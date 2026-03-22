@@ -4,6 +4,7 @@ using Library.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Library.Migrations
 {
     [DbContext(typeof(LibraryDbContext))]
-    partial class LibraryDbContextModelSnapshot : ModelSnapshot
+    [Migration("20260217083704_fixUserTypeDataType")]
+    partial class fixUserTypeDataType
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -106,66 +109,6 @@ namespace Library.Migrations
                     b.ToTable("Borrows");
                 });
 
-            modelBuilder.Entity("Library.Models.Doc", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<int?>("ApprovedById")
-                        .HasColumnType("int");
-
-                    b.Property<string>("BranchCode")
-                        .IsRequired()
-                        .HasMaxLength(10)
-                        .HasColumnType("nvarchar(10)");
-
-                    b.Property<DateTime>("CreatedAt")
-                        .HasColumnType("datetime2");
-
-                    b.Property<int>("CreatedById")
-                        .HasColumnType("int");
-
-                    b.Property<string>("DocNo")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
-
-                    b.Property<int>("DocType")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("PostedById")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("RefId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Remarks")
-                        .HasMaxLength(250)
-                        .HasColumnType("nvarchar(250)");
-
-                    b.Property<int>("Status")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("SupplierId")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("ApprovedById");
-
-                    b.HasIndex("CreatedById");
-
-                    b.HasIndex("DocNo")
-                        .IsUnique();
-
-                    b.HasIndex("PostedById");
-
-                    b.ToTable("Docs");
-                });
-
             modelBuilder.Entity("Library.Models.User", b =>
                 {
                     b.Property<int>("Id")
@@ -216,29 +159,6 @@ namespace Library.Migrations
                     b.Navigation("CreateBy");
 
                     b.Navigation("User");
-                });
-
-            modelBuilder.Entity("Library.Models.Doc", b =>
-                {
-                    b.HasOne("Library.Models.User", "ApprovedBy")
-                        .WithMany()
-                        .HasForeignKey("ApprovedById");
-
-                    b.HasOne("Library.Models.User", "CreatedBy")
-                        .WithMany()
-                        .HasForeignKey("CreatedById")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("Library.Models.User", "PostedBy")
-                        .WithMany()
-                        .HasForeignKey("PostedById");
-
-                    b.Navigation("ApprovedBy");
-
-                    b.Navigation("CreatedBy");
-
-                    b.Navigation("PostedBy");
                 });
 #pragma warning restore 612, 618
         }
