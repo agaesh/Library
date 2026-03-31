@@ -35,7 +35,7 @@
 
 
                         <div v-if="header === 'Name'" class="book-stack">
-                            <div class="book-title clamp">{{ row.name }}</div>
+                            <div class="book-title clamp-1">{{ row.name }}</div>
                             <div class="book-meta">
                                 <span class="author">{{ row.author }}</span>
                                 <span class="genre">{{ row.genre }}</span>
@@ -122,8 +122,10 @@
 <script setup>
     import { toRefs, ref } from "vue"; // You'll need this!
     import { useTableSelection } from '../composables/useTableSelection'
+    import '../assets/css/Utilities.css'
 
-<script setup>defineProps({
+    //Define your props clearly
+    const props = defineProps({
   headers: {
     type: Array,
     required: true
@@ -132,8 +134,9 @@
     type: Array,
     required: true
   }
-})</script>
+    });
 
+</script>
 <style scoped>
     .table-wrapper {
         width: 100%;
