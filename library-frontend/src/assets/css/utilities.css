@@ -522,3 +522,26 @@
 .h-custom {
     height: var(--custom-height);
 }
+.gap-0.5 {
+    gap: 0.125rem;
+}
+/* 2px */
+.gap-1 {
+    gap: 0.25rem;
+}
+/* 4px */
+.gap-1.5 {
+    gap: 0.375rem;
+}
+/* 6px */
+.gap-2 {
+    gap: 0.5rem;
+}
+/* 8px */
+.gap-2.5 {
+    gap: 0.625rem;
+}
+/* 10px */
+.gap-3 {
+    gap: 0.75rem;
+}
