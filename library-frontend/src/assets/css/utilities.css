@@ -303,6 +303,128 @@
 .bg-warning {
     background-color: var(--color-warning);
 }
+.bg-slate-100 {
+    background-color: #f1f5f9;  
+}
+.bg-white {
+    background-color: #ffffff;
+}
+
+
+.bg-gray-100 {
+    background-color: #f5f5f5;
+}
+
+.bg-gray-200 {
+    background-color: #e5e7eb;
+}
+
+.bg-gray-300 {
+    background-color: #d1d5db;
+}
+
+.bg-gray-400 {
+    background-color: #9ca3af;
+}
+
+.bg-gray-500 {
+    background-color: #6b7280;
+}
+
+.bg-blue-50 {
+    background-color: #eff6ff;
+}
+
+.bg-blue-100 {
+    background-color: #dbeafe;
+}
+
+.bg-blue-200 {
+    background-color: #bfdbfe;
+}
+
+.bg-blue-300 {
+    background-color: #93c5fd;
+}
+
+.bg-blue-400 {
+    background-color: #60a5fa;
+}
+
+.bg-blue-500 {
+    background-color: #3b82f6;
+}
+
+.bg-blue-600 {
+    background-color: #2563eb;
+}
+
+.bg-blue-700 {
+    background-color: #1d4ed8;
+}
+
+.bg-red-100 {
+    background-color: #fee2e2;
+}
+
+.bg-red-200 {
+    background-color: #fecaca;
+}
+
+.bg-red-300 {
+    background-color: #fca5a5;
+}
+
+.bg-red-400 {
+    background-color: #f87171;
+}
+
+.bg-red-500 {
+    background-color: #ef4444;
+}
+
+.bg-red-600 {
+    background-color: #dc2626;
+}
+
+.bg-green-100 {
+    background-color: #d1fae5;
+}
+
+.bg-green-200 {
+    background-color: #a7f3d0;
+}
+
+.bg-green-300 {
+    background-color: #6ee7b7;
+}
+
+.bg-green-400 {
+    background-color: #34d399;
+}
+
+.bg-green-500 {
+    background-color: #10b981;
+}
+
+.bg-green-600 {
+    background-color: #059669;
+}
+.bg-emerald-100 {
+    background-color: #d1fae5;
+}
+.bg-emerald-200 {
+    background-color: #a7f3d0;
+}
+.bg-emerald-300{
+    background-color: #6ee7b7;
+}
+.bg-emerald-400 {
+    background-color: #34d399;
+}
+.bg-emerald-500 {
+    background-color: #10b981;
+}
 
 /* =======================
    Clamp Utilities
