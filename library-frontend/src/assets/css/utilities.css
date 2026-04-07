@@ -727,3 +727,37 @@
 .tracking-tighter {
     letter-spacing: -0.05em; /* Tighter letter spacing */
 }
+/* Overflow group */
+.overflow-hidden {
+    overflow: hidden; /* Prevents content from overflowing */
+}
+
+/* Optional variations similar to Tailwind */
+.overflow-auto {
+    overflow: auto; /* Adds scrollbars if needed */
+}
+
+.overflow-visible {
+    overflow: visible; /* Content can overflow */
+}
+
+.overflow-scroll {
+    overflow: scroll; /* Always shows scrollbars */
+}
+
+/* X-axis and Y-axis variations */
+.overflow-x-hidden {
+    overflow-x: hidden;
+}
+
+.overflow-y-hidden {
+    overflow-y: hidden;
+}
+
+.overflow-x-auto {
+    overflow-x: auto;
+}
+
+.overflow-y-auto {
+    overflow-y: auto;
+}
